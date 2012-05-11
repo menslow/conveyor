@@ -1,4 +1,4 @@
-<div class="users form">
+<section class="single clearfix">
 <?php echo $this->Session->flash('auth'); ?>
 <?php echo $this->Form->create('User');?>
 	<fieldset>
@@ -9,4 +9,4 @@
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Login'));?>
-</div>
+</section>

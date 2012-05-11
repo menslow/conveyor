@@ -1,4 +1,4 @@
-<div class="pods form">
+<section class="single clearfix">
 <?php echo $this->Form->create('Pod');?>
 	<fieldset>
 		<legend><?php echo __('Add Pod'); ?></legend>
@@ -12,4 +12,4 @@
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit'));?>
-</div>
+</section>

@@ -72,33 +72,16 @@
 		</div>
 
 		<div class="content">
-		
-			<div class="wide banner">
-				<section class="container_12">
-					<article class="grid_12">
-						<h1><?php __('Death Star'); ?></h1>
-						<p><?php __('That\'s no moon... that\'s a space station.'); ?></p>
-					</article>
-				</section>	
-			</div>
-
 			<div class="full container_12">
-				<section class="single clearfix">
-					<article>
-						<div class="grid_1">
-							<?php echo $content_for_layout; ?>
-						</div>
-					</article>
-				</section>
+				<?php echo $content_for_layout; ?>
 			</div>
-
 		</div>
 
 		<div>
 			<footer>
 				<div class="inner container_12">
 					<div class="grid_6">
-						<p>&copy; <?php echo date('Y'); ?> Mister Machine, LLC - <?php __('all rights reserved'); ?></p>
+						<p>&copy; <?php echo date('Y'); ?> Mister Machine, LLC - <?php echo __('all rights reserved'); ?></p>
 					</div>
 					<div class="grid_6">
 						<!-- footer menu -->
