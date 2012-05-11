@@ -39,12 +39,12 @@
 			<div class="tools container_12">
 				<div class="account prefix_8 grid_4">
 					<ul class="right">
-					<?php if(isset($user)) : ?>
-						<li><?php echo $this->Html->link(__('Log Out'), '/users/logout'); ?></li>
-						<li><?php echo $this->Html->link($user['username'], '/users/view/'.$user['id']); ?></li>
+					<?php if(isset($auth_user)) : ?>
+						<li><?php echo $this->Html->link($auth_user['username'], array('controller' => 'users', 'action' => 'view', $auth_user['id'])); ?></li>
+						<li><?php echo $this->Html->link(__('Log Out'), array('controller' => 'users', 'action' => 'logout')); ?></li>
 					<?php else : ?>
-						<li><?php echo $this->Html->link(__('Register'), '/users/add'); ?></li>
-						<li><?php echo $this->Html->link(__('Sign In'), '/users/login'); ?></li>
+						<li><?php echo $this->Html->link(__('Register'), array('controller' => 'users', 'action' => 'add')); ?></li>
+						<li><?php echo $this->Html->link(__('Sign In'), array('controller' => 'users', 'action' => 'login')); ?></li>
 					<?php endif; ?>
 					</ul>
 				</div>
@@ -58,6 +58,9 @@
 				</div>
 				<nav class="grid_8">
 					<!-- main menu -->
+					<ul>
+						<li><?php echo $this->Html->link(__('Pods'), array('controller' => 'pods', 'action' => 'index')); ?></li>
+					</ul>
 				</nav>
 			</div>
 		</header>

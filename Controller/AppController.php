@@ -14,7 +14,7 @@ class AppController extends Controller {
 		// allow access to all index and view actions
 		$this->Auth->allow('index', 'view');
 
-		$this->set('user', $this->Auth->User());
+		$this->set('auth_user', $this->Auth->User());
 
 	}
 }

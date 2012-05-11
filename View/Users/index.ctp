@@ -1,6 +1,6 @@
 <h2><?php __('Users'); ?></h2>
 
-<table>
+<table class="container_12">
 	<tr>
 		<th><?php __('Id'); ?></th>
 		<th><?php __('Username'); ?></th>
