@@ -54,7 +54,7 @@
 		<header>
 			<div class="hgroup container_12">
 				<div class="logo grid_4">
-					<strong><?php echo __('Heart'); ?></strong>
+					<strong><?php echo __('Conveyor'); ?></strong>
 				</div>
 				<nav class="grid_8">
 					<!-- main menu -->
