@@ -60,6 +60,7 @@
 					<!-- main menu -->
 					<ul>
 						<li><?php echo $this->Html->link(__('Pods'), array('controller' => 'pods', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Groups'), array('controller' => 'groups', 'action' => 'index')); ?></li>
 					</ul>
 				</nav>
 			</div>

@@ -4,6 +4,9 @@
 		<legend><?php echo __('Add Pod'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
+		echo $this->Form->input('group_id', array(
+			'options' => $groups
+		));
 		echo $this->Form->input('content');
 		echo $this->Form->input('sequence');
 		echo $this->Form->input('complexity', array(

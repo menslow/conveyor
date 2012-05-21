@@ -1,7 +1,7 @@
 <?php
-class Pod extends AppModel {
-	public $name = 'Pod';
-	public $belongsTo = 'Group';
+class Group extends AppModel {
+	public $name = 'Group';
+	public $hasMany = 'Pod';
 	public $validate = array(
 		'name' => array(
 			'required' => array(

@@ -1,13 +1,23 @@
 <?php
 class PodsController extends AppController {
 
+	var $uses = array('Group', 'Pod');
+
 	public function beforeFilter() {
 		parent::beforeFilter();
 	}
 
 	public function index() {
+/*
 		$this->Pod->recursive = 0;
+		$this->Pod->order = array('Pod.sequence' => 'ASC');
 		$this->set('pods', $this->paginate());
+*/
+		$pods = $this->Pod->find('all', array(
+			'order' => array('Pod.name ASC')
+		));
+		$this->set('pods', $pods);
+
 	}
 
 	public function view($id = null) {
@@ -27,6 +37,13 @@ class PodsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The pod could not be saved. Please, try again.'));
 			}
+		} else {
+			$groups = $this->Group->find('list', array(
+				'fields' => array('Group.id', 'Group.name'),
+				'order' => array('Group.name ASC'),
+				'recursive' => 0
+			));
+			$this->set('groups', $groups);
 		}
 	}
 
